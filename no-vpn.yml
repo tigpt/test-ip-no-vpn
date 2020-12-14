@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-ip-no-vpn
+spec:
+  template:
+    metadata:
+      name: test-ip-no-vpn-pod
+    spec:
+      containers:
+      - name: test-ip-no-vpn
+        image: tigpt/test-ip-no-vpn
+      restartPolicy: Never
